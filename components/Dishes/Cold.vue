@@ -1,16 +1,15 @@
 <template>
-  <!--typeId是DishList组件的props，通过这种方法传递参数-->
-  <DishList :typeId="typeId"></DishList>
+  <ul>
+<!--    <li v-for="(item, index) in dishes" :key="index">{{item.name}} {{item.price}}元/份</li>-->
+  </ul>
 </template>
 <script>
-import DishList from './DishList'
 export default {
-  components: {
-    DishList
-  },
   data () {
     return {
-      typeId: 1 // 1在数据库里就对应了热菜
+      dishes: [
+
+      ]
     }
   }
 }

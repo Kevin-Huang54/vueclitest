@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <SideBar></SideBar>
-    <router-view></router-view>
+    <h1>热菜</h1>
+    <Hot :dishes="dishes"></Hot>
+    <h1>凉菜</h1>
+    <Cold :dishes="dishes"></Cold>
   </div>
 </template>
 <script>
-import SideBar from './components/SideBar'
+import Hot from './components/Dishes/Hot'
+import Cold from './components/Dishes/Cold'
 export default {
   components: {
-    SideBar
+    Hot,
+    Cold
+  },
+  data () {
+    return {
+      dishes: [
+        { name: '可乐鸡翅', price: 34 },
+        { name: '大鸡腿', price: 10 }
+      ]
+    }
   }
 }
 </script>

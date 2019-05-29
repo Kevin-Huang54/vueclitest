@@ -1,16 +1,10 @@
 <template>
-  <DishList :typeId="typeId"></DishList>
+  <ul>
+    <li v-for="(item, index) in dishes" :key="index">{{item.name}} {{item.price}}元/份</li>
+  </ul>
 </template>
 <script>
-import DishList from './DishList'
 export default {
-  components: {
-    DishList
-  },
-  data () {
-    return {
-      typeId: 2
-    }
-  }
+  props: ['dishes']
 }
 </script>

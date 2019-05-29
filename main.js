@@ -1,19 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+// import router from './router'
 import Axios from 'axios'
 // import store from './store'
 Vue.config.productionTip = false
 Vue.prototype.$axios = Axios
 
 new Vue({
-  router,
+  // router,
   // store,
   render: h => h(App)
 }).$mount('#app')
 
 // 默认跳转到home页
-router.push('/home')
+// router.push('/home')
 
 // 全局守卫，所有页面都要跳转到登录页
 // router.beforeEach((to, from, next) => {
