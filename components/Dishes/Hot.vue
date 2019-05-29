@@ -1,5 +1,16 @@
 <template>
-    <div>
-        <h2>热菜页</h2>
-    </div>
+  <DishList :typeId="typeId"></DishList>
 </template>
+<script>
+import DishList from './DishList'
+export default {
+  components: {
+    DishList
+  },
+  data () {
+    return {
+      typeId: 2
+    }
+  }
+}
+</script>
