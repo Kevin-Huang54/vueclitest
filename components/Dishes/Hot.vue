@@ -5,6 +5,10 @@
 </template>
 <script>
 export default {
-  props: ['dishes']
+  computed: {
+    dishes () {
+      return this.$store.getters.changePrice
+    }
+  }
 }
 </script>

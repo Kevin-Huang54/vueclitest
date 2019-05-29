@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <h1>热菜</h1>
-    <Hot :dishes="dishes"></Hot>
+    <Hot></Hot>
     <h1>凉菜</h1>
-    <Cold :dishes="dishes"></Cold>
+    <Cold></Cold>
   </div>
 </template>
 <script>
@@ -13,14 +13,6 @@ export default {
   components: {
     Hot,
     Cold
-  },
-  data () {
-    return {
-      dishes: [
-        { name: '可乐鸡翅', price: 34 },
-        { name: '大鸡腿', price: 10 }
-      ]
-    }
   }
 }
 </script>
